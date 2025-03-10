@@ -65,6 +65,7 @@ require('lazy').setup({
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {'numToStr/Comment.nvim'},
+    {'kylechui/nvim-surround'},
 })
 -- Treesitter configs
 require 'nvim-treesitter.configs'.setup {
@@ -102,7 +103,6 @@ local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
-    -- to learn the available actions
     lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
@@ -160,6 +160,8 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations, {})
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>ft', ':Telescope<CR>', {})
+-- nvim-surround
+require('nvim-surround').setup()
 -- nvim-ufo FOLDING
 -- Appearances
 vim.opt.termguicolors = true
