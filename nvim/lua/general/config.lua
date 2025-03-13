@@ -12,6 +12,7 @@ o.incsearch = true
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>ct", ":lua Transparent()<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
 
 function Transparent()
     require("onedark").setup({
@@ -48,4 +49,3 @@ else
     -- Switch_color()
     Transparent()
 end
--- Switch_color()
