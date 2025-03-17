@@ -13,6 +13,15 @@ vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>ct", ":lua Transparent()<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>mm", ":lua  ToggleMouse()<CR>", { noremap = true })
+
+function ToggleMouse()
+    if o.mouse._value == 'a' then
+        o.mouse = ''
+    else
+        o.mouse = 'a'
+    end
+end
 
 function Transparent()
     require("onedark").setup({
