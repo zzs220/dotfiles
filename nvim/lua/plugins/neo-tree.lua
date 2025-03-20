@@ -7,5 +7,6 @@ return {
     },
     config = function ()
         vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle float<CR>", { noremap = true })
+        vim.api.nvim_set_keymap("n", "<leader>E", ":Neotree left<CR>", { noremap = true })
     end
 }
