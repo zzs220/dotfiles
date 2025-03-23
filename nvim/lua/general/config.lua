@@ -9,12 +9,12 @@ o.shiftwidth = 4
 o.mouse = ''
 o.hlsearch = false
 o.incsearch = true
-vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>ct", ":lua Transparent()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>mm", ":lua  ToggleMouse()<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>k", ":lua  vim.diagnostic.open_float()<CR>", { noremap = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
+vim.keymap.set("n", "<leader>ct", ":lua Transparent()<CR>", {noremap = true})
+vim.keymap.set("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>mm", ":lua  ToggleMouse()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>k", ":lua  vim.diagnostic.open_float()<CR>", { noremap = true })
 
 function ToggleMouse()
     if o.mouse._value == 'a' then
@@ -36,7 +36,7 @@ function Transparent()
     })
 end
 
-vim.api.nvim_set_keymap("n", "<leader>cs", ":lua Switch_color()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>cs", ":lua Switch_color()<CR>", { noremap = true })
 Colors = {
     "onedark",
     "tokyonight-night"
