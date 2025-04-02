@@ -6,3 +6,5 @@ font-feature = ss01,liga
 window-decoration = true
 keybind = shift+left=previous_tab
 keybind = shift+right=next_tab
+keybind = ctrl+f=toggle_fullscreen
+keybind = ctrl+enter=unbind
