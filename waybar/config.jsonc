@@ -24,7 +24,7 @@
         "interval": 3600,
         "exec": "zypper lu | grep 'v \\+|' | wc -l; echo 'packages to update'",
         "exec-if": "exit 0",
-        "on-click": "exec wezterm -e sudo sh -c 'zypper ref; zypper dup; pkill -SIGRTMIN+8 waybar'",
+        "on-click": "exec ghostty -e sudo sh -c 'zypper ref; zypper dup; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     // Modules configuration
@@ -120,7 +120,7 @@
         "format-linked": "",
         "format-disconnected": "⚠",
         "format-alt": "{ifname} {essid} ({signalStrength}%)",
-        "on-click-right": "exec wezterm -e nmtui",
+        "on-click-right": "exec ghostty -e nmtui",
     },
     "bluetooth": {
 	"format": "",
@@ -136,7 +136,7 @@
 	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
 	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
 	//"on-click": "bluetooth toggle; pkill -SIGRTMIN+8 waybar",
-	"on-click": "exec wezterm -e sh -c 'bluetui'"
+	"on-click": "exec ghostty -e sh -c 'bluetui'"
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -154,7 +154,7 @@
         },
         "scroll-step": 10,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "exec wezterm -e pulsemixer",
+        "on-click-right": "exec ghostty -e pulsemixer",
         "tooltip": false
     },
     "custom/scratchpad": {
