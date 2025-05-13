@@ -14,7 +14,11 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
 vim.keymap.set("n", "<leader>ct", ":lua Transparent()<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>mm", ":lua  ToggleMouse()<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>k", ":lua  ToggleVL()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>k", ":lua  vim.diagnostic.open_float()<CR>", { noremap = true })
+vim.keymap.set("n", "gd", ":lua  vim.lsp.buf.definition()<CR>", { noremap = true })
+vim.keymap.set("n", "<F2>", ":lua  vim.lsp.buf.format()<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>t", ":terminal<CR>", { noremap = true })
+
 
 vim.diagnostic.config({virtual_text=true})
 VirtualLineEnabled = false
