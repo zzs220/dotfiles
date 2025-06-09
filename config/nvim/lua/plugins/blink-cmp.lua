@@ -6,6 +6,8 @@ return
   version = '1.*',
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
+
+  event = 'VimEnter',
   opts = {
     -- See :h blink-cmp-config-keymap for defining your own keymap
     keymap = {
@@ -13,8 +15,8 @@ return
         ['<C-j>'] = {'select_next', 'fallback'},
         ['<C-k>'] = {'select_prev', 'fallback'},
         ['<CR>'] = {'accept', 'fallback'},
-        ['<C-d>'] = {'scroll_documentation_down', 'fallback'},
-        ['<C-u>'] = {'scroll_documentation_up', 'fallback'},
+        ['<C-d>'] = {'scroll_documentation_down'},
+        ['<C-u>'] = {'scroll_documentation_up'},
         ["<Tab>"] = {
             function(cmp)
                 return cmp.select_next()
