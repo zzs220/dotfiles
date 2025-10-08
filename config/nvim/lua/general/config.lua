@@ -18,6 +18,10 @@ vim.keymap.set("n", "<leader>k", ":lua  vim.diagnostic.open_float()<CR>", { nore
 vim.keymap.set("n", "gd", ":lua  vim.lsp.buf.definition()<CR>", { noremap = true })
 vim.keymap.set("n", "<F2>", ":lua  vim.lsp.buf.format()<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>t", ":terminal<CR>", { noremap = true })
+-- keep selection after indenting in visual mode
+vim.keymap.set("v", "<", "<gv", { silent = true })
+vim.keymap.set("v", ">", ">gv", { silent = true })
+
 
 
 vim.diagnostic.config({virtual_text=true})
