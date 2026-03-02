@@ -1,0 +1,4 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias git-log='git log --oneline --graph --decorate --all'
+alias fchat='aichat --role %functions%'
