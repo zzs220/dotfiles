@@ -22,5 +22,6 @@ require('lazy').setup({
     {import = "plugins.formatter"},
     {import = "plugins.themes"},
     {import = "plugins.local"},
+    {import = "plugins.ai"},
 })
 
