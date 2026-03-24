@@ -3,5 +3,6 @@ set -e
 
 cd "$(dirname "$0")"
 
-stow -t "$HOME/.config" config
-stow -t "$HOME" home
+stow --adopt -t "$HOME/.config" config
+stow --adopt -t "$HOME" home
+git restore .
