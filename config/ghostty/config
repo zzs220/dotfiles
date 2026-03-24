@@ -1,6 +1,6 @@
 font-family = Fira Code
-background-opacity = 0.96
-theme = deep
+background-opacity = 0.90
+background-blur = true
 font-size = 11
 font-feature = ss01,liga
 window-decoration = true
@@ -9,3 +9,5 @@ keybind = shift+left=previous_tab
 keybind = shift+right=next_tab
 keybind = ctrl+f=toggle_fullscreen
 keybind = ctrl+enter=unbind
+
+config-file = ?auto/theme.ghostty
