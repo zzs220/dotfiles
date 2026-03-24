@@ -1,4 +1,3 @@
-#!/bin/bash
 dispatch() {
     local script="$1"
     local ui_env="${UI_ENV:-default}"

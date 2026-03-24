@@ -1,1 +1,1 @@
-killall waybar || waybar 
+pkill waybar || waybar 

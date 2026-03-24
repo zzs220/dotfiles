@@ -1,4 +1,3 @@
-#!/bin/bash
 PID=$(pgrep -x hypridle)
 [[ -z "$PID" ]] && exit
 if ps -o state= -p "$PID" | grep -q T; then
