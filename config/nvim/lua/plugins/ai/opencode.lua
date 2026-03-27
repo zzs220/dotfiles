@@ -16,10 +16,18 @@ return {
 	config = function()
 		require("opencode").setup({
 			default_global_keymaps = false,
+            server = {
+                url = nil,             -- URL/hostname (e.g., 'http://192.168.1.100', 'localhost', 'https://myserver.com')
+                port = nil,            -- Port number (e.g., 8080), 'auto' for random port
+                timeout = 10,           -- Health check timeout in seconds when connecting
+                auto_kill = true,      -- Kill spawned servers when last nvim instance exits (default: true) Only applies to servers spawned by the plugin with spawn_command/kill_command
+                path_map = nil,        -- Map host paths to server paths: string ('/app') or function(path) -> string
+                },
 			keymap = {
 				editor = {
 					["<leader>oo"] = { "open_input" },
 					["<leader>om"] = { "configure_provider" }, -- Quick provider and model switch from predefined list
+                    ['<leader>os'] = { 'select_session' }, -- Select and load a opencode session
 					["<leader>oy"] = { "add_visual_selection", mode = { "v" } },
 					["<leader>o/"] = { "quick_chat", mode = { "n", "x" } }, -- Open quick chat input with selection context in visual mode or current line context in normal mode
 				},
@@ -178,6 +186,11 @@ return {
 				level = "warn", -- debug, info, warn, error
 				outfile = nil,
 			},
+            quick_chat = {
+                default_model = nil,   -- works better with a fast model like gpt-4.1
+                default_agent = nil, -- Uses the current mode when nil
+                instructions = "You are in quick chat mode - a temporary session with narrow context for small, targeted code edits. Be concise and make minimal, focused changes.",
+            },
 		})
 	end,
 }
