@@ -8,9 +8,7 @@
         "customLaunchPrefixEnabled": false,
         "density": "comfortable",
         "enableClipPreview": true,
-        "enableClipboardChips": true,
         "enableClipboardHistory": true,
-        "enableClipboardSmartIcons": true,
         "enableSessionSearch": true,
         "enableSettingsSearch": true,
         "enableWindowsSearch": true,
@@ -24,13 +22,15 @@
         "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
-        "terminalCommand": "alacritty -e",
+        "terminalCommand": "ghostty",
+        "useApp2Unit": false,
         "viewMode": "list"
     },
     "audio": {
         "mprisBlacklist": [
             "chromium",
-            "zen"
+            "zen",
+            "firefox"
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
@@ -72,6 +72,10 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "eDP-1"
+            }
         ],
         "showCapsule": true,
         "showOnWorkspaceSwitch": true,
@@ -344,10 +348,8 @@
         "indicatorColor": "primary",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 3,
-        "launcherIcon": "",
         "launcherIconColor": "none",
         "launcherPosition": "end",
-        "launcherUseDistroLogo": false,
         "monitors": [
         ],
         "onlySameOutput": true,
@@ -425,9 +427,8 @@
         "telemetryEnabled": false
     },
     "hooks": {
-        "colorGeneration": "",
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -466,7 +467,7 @@
     },
     "network": {
         "airplaneModeEnabled": false,
-        "bluetoothAutoConnect": true,
+        "bluetoothAutoConnect": false,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "bluetoothRssiPollIntervalMs": 60000,
@@ -536,8 +537,7 @@
         "overlayLayer": true
     },
     "plugins": {
-        "autoUpdate": false,
-        "notifyUpdates": true
+        "autoUpdate": false
     },
     "sessionMenu": {
         "countdownDuration": 10000,
@@ -606,7 +606,7 @@
         "showHeader": true,
         "showKeybinds": true
     },
-    "settingsVersion": 59,
+    "settingsVersion": 57,
     "systemMonitor": {
         "batteryCriticalThreshold": 5,
         "batteryWarningThreshold": 20,
@@ -646,20 +646,20 @@
             },
             {
                 "enabled": true,
-                "id": "gtk"
+                "id": "zenBrowser"
             },
             {
                 "enabled": true,
-                "id": "zenBrowser"
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Sans Serif",
+        "fontDefault": "Fira Code",
         "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontFixed": "Fira Code",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.75,
         "panelsAttachedToBar": true,
@@ -671,7 +671,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/zrd/Pictures",
+        "directory": "/home/zrd/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -711,9 +711,7 @@
         "sortOrder": "name_desc",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
-        "transitionType": [
-            "honeycomb"
-        ],
+        "transitionType": "random",
         "useSolidColor": false,
         "useWallhaven": true,
         "viewMode": "browse",
@@ -721,12 +719,12 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "cyber",
+        "wallhavenQuery": "",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
         "wallhavenResolutionWidth": "",
-        "wallhavenSorting": "views",
+        "wallhavenSorting": "favorites",
         "wallpaperChangeMode": "random"
     }
 }
