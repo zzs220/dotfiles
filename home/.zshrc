@@ -24,7 +24,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 autoload -Uz compinit
-compinit
+compinit -C
 
 ### OMZ Plugins
 zinit snippet OMZP::git
