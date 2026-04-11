@@ -31,7 +31,9 @@ zinit snippet OMZP::git
 zinit snippet OMZP::extract
 zinit snippet OMZP::sudo
 zinit snippet OMZP::colored-man-pages
-
+## fzf
+zinit ice wait lucid atinit"source shell/key-bindings.zsh; source shell/completion.zsh"
+zinit light junegunn/fzf
 ### Theme
 source "$ZINIT_DIR/prompt.zsh"
 
