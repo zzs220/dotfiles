@@ -31,14 +31,21 @@ return
             },
         },
         appearance = {
-            nerd_font_variant = 'mono'
+            nerd_font_variant = 'mono',
         },
         completion = {
             list = { selection  = {preselect = false}},
-            documentation = { auto_show = true },
+            documentation = {
+              auto_show = true,
+              window = { border = 'rounded' },
+          },
             accept = { auto_brackets = { enabled = false } },
+            menu = { border = 'rounded' },
         },
-        signature = { enabled = true },
+        signature = {
+          enabled = true,
+          window = { border = 'rounded' }
+        },
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer' },
         },
