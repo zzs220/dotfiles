@@ -11,7 +11,6 @@ o.hlsearch = false
 o.incsearch = true
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true })
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true })
-vim.keymap.set("n", "<leader>ct", ":lua Transparent()<CR>", {noremap = true})
 vim.keymap.set("n", "<leader>rn", ":lua  vim.o.relativenumber = not vim.o.relativenumber<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>mm", ":lua  ToggleMouse()<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>k", ":lua  vim.diagnostic.open_float()<CR>", { noremap = true })
@@ -38,18 +37,6 @@ function ToggleMouse()
     end
 end
 
-function Transparent()
-    require("onedark").setup({
-        transparent = true,
-        style = 'darker',
-    })
-    vim.cmd.colorscheme('onedark')
-    require("onedark").setup({
-        style = 'darker',
-        transparent = false,
-    })
-end
-
 vim.keymap.set("n", "<leader>cs", ":lua Switch_color()<CR>", { noremap = true })
 Colors = {
     "onedark",
@@ -70,6 +57,5 @@ end
 if vim.env.DISPLAY=='' then
     vim.cmd.colorscheme('elflord')
 else
-    -- Switch_color()
-    Transparent()
+    Switch_color()
 end
