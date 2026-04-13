@@ -11,29 +11,10 @@ else
   NCOLOR="green"
 fi
 
-GIT_COLOR="yellow"
-
-### Native git prompt function (replacement for git_prompt_info)
-git_prompt_info() {
-  git rev-parse --is-inside-work-tree &>/dev/null || return
-
-  local branch dirty
-  branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
-
-  if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-    dirty=" %F{red}✗%f"
-  else
-    dirty=" %F{green}✔%f"
-  fi
-
-  echo "%F{$GIT_COLOR}(${branch})%f${dirty}"
-}
-
 ### Left prompt
 PROMPT='%F{blue}%n@%m%f: %F{$NCOLOR}%2~ ≫ %f'
 
 ### Right prompt
-RPROMPT='$(git_prompt_info)'
 
 ### LS Colors
 export LSCOLORS="exfxcxdxbxbxbxbxbxbxbxbxbx"
