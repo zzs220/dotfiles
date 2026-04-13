@@ -34,6 +34,8 @@ zinit snippet OMZP::colored-man-pages
 ## fzf
 zinit ice wait lucid atinit"source shell/key-bindings.zsh; source shell/completion.zsh"
 zinit light junegunn/fzf
+## zoxide
+eval "$(zoxide init zsh)"
 ### Theme
 source "$ZINIT_DIR/prompt.zsh"
 
