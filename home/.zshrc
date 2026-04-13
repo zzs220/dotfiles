@@ -16,6 +16,7 @@ ZINIT_DIR="$HOME/.config/zinit"
 ### History
 HISTSIZE=10000
 SAVEHIST=10000
+setopt vi
 setopt appendhistory sharehistory hist_ignore_dups hist_reduce_blanks inc_append_history
 
 ### Completion
