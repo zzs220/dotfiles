@@ -5,9 +5,22 @@ return {
         "MunifTanjim/nui.nvim",
     },
     config = function ()
-        vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle reveal float<CR>", { noremap = true })
-        vim.api.nvim_set_keymap("n", "<leader>E", ":Neotree reveal left<CR>", { noremap = true })
+        local position = "float"
+
+        local function toggle_position()
+            if position == "float" then
+                position = "left"
+            else
+                position = "float"
+            end
+            vim.g.position = position
+            vim.cmd("Neotree toggle reveal " .. position)
+        end
+
+        vim.keymap.set("n", "<leader>e", function() vim.cmd("Neotree toggle reveal " .. position) end)
+        vim.keymap.set("n", "<leader>E", toggle_position)
         require("neo-tree").setup({
+            popup_border_style = "rounded",
             filesystem = {
                 -- filtered_items = {
                 --     visible = true,
