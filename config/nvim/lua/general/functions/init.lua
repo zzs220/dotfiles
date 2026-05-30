@@ -1,0 +1,5 @@
+require("general.functions.switch-color")
+require("general.functions.toggle-transparency")
+require("general.functions.toggle-virtual-lines")
+require("general.functions.set-tab")
+require("general.functions.toggle-mouse")
