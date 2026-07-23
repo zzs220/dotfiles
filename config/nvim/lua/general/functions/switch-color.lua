@@ -1,8 +1,8 @@
 vim.keymap.set("n", "<leader>cs", ":lua Switch_color()<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>cd", ":lua Toggle_dark_theme()<CR>", { noremap = true })
 
-local dark_schemes = { "tokyonight-night", "onedark" }
-local light_schemes = { "catppuccin-latte" }
+local dark_schemes = { "tokyonight-night", "onedark", "zenbones" }
+local light_schemes = { "catppuccin-latte", "zenbones" }
 
 local dark_mode = true
 local current_index = 1
@@ -24,6 +24,6 @@ end
 if vim.env.DISPLAY == '' then
     vim.cmd.colorscheme('elflord')
 else
-    current_index = 1
+    current_index = 0
     Switch_color()
 end
