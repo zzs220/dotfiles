@@ -22,10 +22,3 @@ vim.keymap.set("n", "<F2>", ":lua  vim.lsp.buf.format()<CR>", { noremap = true }
 vim.keymap.set("v", "<", "<gv", { silent = true })
 vim.keymap.set("v", ">", ">gv", { silent = true })
 
--- Set Color
-if vim.env.DISPLAY == '' then
-    vim.cmd.colorscheme('elflord')
-else
-    Selected_color = Selected_color - 1
-    Switch_color()
-end
