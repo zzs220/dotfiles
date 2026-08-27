@@ -71,6 +71,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+  name = "no-translucency-fullscreen",
+  match =  {fullscreen = true},
+  opacity =  "1",
+})
+
+hl.window_rule({
   name = "mpv",
   match =  {class = "^(mpv)$"},
   idle_inhibit = "focus",
