@@ -87,3 +87,9 @@ hl.window_rule({
   match =  {class = ".*(firefox|chromium|brave|zen).*"},
   opacity =  "1",
 })
+hl.window_rule({
+  name = "games",
+  match =  {class = "^(gamescope)$"},
+  idle_inhibit = "focus",
+  opacity =  "1",
+})
