@@ -89,6 +89,11 @@ hl.window_rule({
 })
 hl.window_rule({
   name = "games",
+  match =  {class = ".*(gamescope).*"},
+  opacity =  "1",
+})
+hl.window_rule({
+  name = "games",
   match =  {class = "^(gamescope)$"},
   idle_inhibit = "focus",
   opacity =  "1",
